@@ -7,9 +7,13 @@
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     overflow-x: hidden;
     color: #374151;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 .container {
@@ -52,6 +56,7 @@ h1 {
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 .play-button, .control-button {
@@ -113,7 +118,26 @@ h1 {
 
 .story {
     line-height: 1.8;
-    font-size: 1.125rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    color: #4b5563;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.story p:first-of-type::first-letter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ec4899;
+    float: left;
+    margin-right: 0.5rem;
+}
+
+/* Text highlight effect */
+.story p span {
+    background: linear-gradient(to right, #ec4899, #fbcfe8);
+    padding: 2px 6px;
+    border-radius: 5px;
+    color: #fff;
 }
 
 .image-container {
