@@ -16,11 +16,22 @@
             <div class="header">
                 <h1 class="animate-fade-in">An Evening Together</h1>
                 <div class="music-player">
+                    <button id="prevButton" class="control-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                    </button>
                     <button id="playButton" class="play-button">
                         <svg xmlns="http://www.w3.org/2000/svg" class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" class="pause-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
                     </button>
-                    <div id="currentSong" class="current-song">♪ Guzarish ♪</div>
+                    <button id="nextButton" class="control-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                    </button>
+                    <div class="song-info">
+                        <div id="currentSong" class="current-song">♪ Guzarish ♪</div>
+                        <div class="progress-bar">
+                            <div id="progress" class="progress"></div>
+                        </div>
+                    </div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="music-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
                 </div>
             </div>

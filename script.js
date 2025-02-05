@@ -5,19 +5,19 @@ const songs = [
     },
     {
         title: "♪ Apna Bana Le ♪",
-        url: "https://docs.google.com/uc?export=download&id=YOUR_FILE_ID"
+        url: "assets/Apna-Bana-Le.mp3"
     },
     {
         title: "♪ Rasiya ♪",
-        url: "https://docs.google.com/uc?export=download&id=YOUR_FILE_ID"
+        url: "assets/Rasiya.mp3"
     },
     {
         title: "♪ Soniyo ♪",
-        url: "https://docs.google.com/uc?export=download&id=YOUR_FILE_ID"
+        url: "assets/Soniyo.mp3"
     },
     {
         title: "♪ Cigarette After Sex - Heavenly ♪",
-        url: "https://docs.google.com/uc?export=download&id=YOUR_FILE_ID"
+        url: "assets/heavenly.mp3"
     }
 ];
 
@@ -38,9 +38,12 @@ let currentSong = 0;
 let isPlaying = false;
 const audio = new Audio();
 const playButton = document.getElementById('playButton');
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
 const currentSongElement = document.getElementById('currentSong');
 const playIcon = playButton.querySelector('.play-icon');
 const pauseIcon = playButton.querySelector('.pause-icon');
+const progressBar = document.getElementById('progress');
 
 function togglePlay() {
     if (isPlaying) {
@@ -55,6 +58,16 @@ function togglePlay() {
     isPlaying = !isPlaying;
 }
 
+function playPreviousSong() {
+    currentSong = (currentSong - 1 + songs.length) % songs.length;
+    updateSong();
+}
+
+function playNextSong() {
+    currentSong = (currentSong + 1) % songs.length;
+    updateSong();
+}
+
 function updateSong() {
     audio.src = songs[currentSong].url;
     currentSongElement.textContent = songs[currentSong].title;
@@ -63,11 +76,35 @@ function updateSong() {
     }
 }
 
-playButton.addEventListener('click', togglePlay);
+function updateProgress() {
+    if (audio.duration) {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
+}
 
-audio.addEventListener('ended', () => {
-    currentSong = (currentSong + 1) % songs.length;
-    updateSong();
+// Event Listeners
+playButton.addEventListener('click', togglePlay);
+prevButton.addEventListener('click', playPreviousSong);
+nextButton.addEventListener('click', playNextSong);
+
+audio.addEventListener('ended', playNextSong);
+audio.addEventListener('timeupdate', updateProgress);
+
+// Keyboard controls
+document.addEventListener('keydown', (e) => {
+    switch(e.code) {
+        case 'Space':
+            e.preventDefault();
+            togglePlay();
+            break;
+        case 'ArrowLeft':
+            playPreviousSong();
+            break;
+        case 'ArrowRight':
+            playNextSong();
+            break;
+    }
 });
 
 // Initial setup
