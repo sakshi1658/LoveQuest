@@ -108,11 +108,11 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-pink-100 to-purple-100 p-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-purple-800 mb-8 mt-4">
-          Adi & Sakshi's Love Story
+          Story of A & S
         </h1>
         
-        <div className="grid grid-cols-2 gap-8">
-          {/* Software Developer (Adi) */}
+        {/* <div className="grid grid-cols-2 gap-8">
+         
           <div className="relative">
             <div className="bg-blue-100 rounded-2xl p-6 shadow-lg transform hover:scale-105 transition-transform">
               <div className="flex items-center mb-4">
@@ -135,7 +135,6 @@ function App() {
             </div>
           </div>
 
-          {/* CSE Engineer (Sakshi) */}
           <div className="relative">
             <div className="bg-pink-100 rounded-2xl p-6 shadow-lg transform hover:scale-105 transition-transform">
               <div className="flex items-center mb-4">
@@ -157,14 +156,14 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Morning Scene */}
-        <div className="mt-12 relative h-48 bg-gradient-to-b from-sky-200 to-sky-100 rounded-lg overflow-hidden">
-          <div className="absolute top-4 right-8 w-12 h-12 bg-yellow-300 rounded-full animate-pulse" />
+        {/* <div className="mt-12 relative h-48 bg-gradient-to-b from-sky-200 to-sky-100 rounded-lg overflow-hidden">
+          <div className="absolute top-4 right-8 w-12 h-12 bg-yellow-300 rounded-full animate-pulse" /> */}
           
           {/* Walking Character (Sakshi) */}
-          <div 
+          {/* <div 
             className="absolute bottom-0 transition-all duration-300"
             style={{ left: `${characterPosition}%` }}
           >
@@ -173,9 +172,9 @@ function App() {
               <div className="absolute -top-4 w-6 h-6 bg-pink-300 rounded-full left-1" />
             </div>
           </div>
-          
+           */}
           {/* Waving Character (Adi) */}
-          <div className="absolute bottom-0 left-4">
+          {/* <div className="absolute bottom-0 left-4">
             <div className="relative">
               <div className="w-8 h-16 bg-blue-400 rounded-t-full" />
               <div className="absolute -top-4 w-6 h-6 bg-blue-300 rounded-full left-1" />
@@ -186,9 +185,9 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="absolute bottom-0 w-full flex justify-around">
+          {/* <div className="absolute bottom-0 w-full flex justify-around">
             <div className="w-24 h-32 bg-gray-800 rounded-t-lg relative">
               <div className="absolute inset-2 grid grid-cols-2 gap-1">
                 {[...Array(12)].map((_, i) => (
@@ -207,16 +206,16 @@ function App() {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
           
-          <div className="absolute bottom-0 right-4">
+          {/* <div className="absolute bottom-0 right-4">
             <div className="w-20 h-24 bg-rose-400 rounded-t-lg relative">
               <div className="absolute top-2 left-1/2 transform -translate-x-1/2">
                 <Coffee className="w-6 h-6 text-white animate-bounce" />
               </div>
             </div>
-          </div>
-
+          </div> */}
+{/* 
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
@@ -230,12 +229,37 @@ function App() {
               <Heart className="w-4 h-4 text-pink-400" />
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Transition Text and Button */}
         <div className="text-center my-8">
           <p className="text-lg text-purple-700 mb-4 font-medium">
-            "Hey love! Work's done, let me play your favorite songs while we spend this beautiful evening together ❤️"
+          The sun had begun its slow descent, painting the sky in soft hues of pink and orange. The city was alive with the distant hum of traffic, but in their little world, everything felt calm.
+
+Sakshi walked into the apartment, letting out a tired sigh as she placed her bag on the couch. It had been a long day—meetings, deadlines, and a hundred little things that had drained her energy. Adi, already home, peeked from the kitchen with a knowing smile.
+
+“Tough day?” he asked, stirring the two cups of coffee he had just made.
+
+“The worst,” she mumbled, plopping onto the couch. “I feel like I’ve been running a marathon.”
+
+Adi chuckled, bringing over her coffee and sitting beside her. “Then let’s hit pause.”
+
+Sakshi took the mug, her fingers wrapping around the warmth. She exhaled deeply, already feeling a little lighter. Adi gently pulled her legs over his lap, his fingers tracing soft circles on her ankle.
+
+For a moment, they sat in silence, just letting the comfort of each other’s presence settle in.
+
+Then, with a teasing grin, Adi reached for his phone. “You know what you need?”
+
+Sakshi raised an eyebrow. “Sleep?”
+
+He laughed. “That too. But first…” He tapped his screen, and a familiar melody began to fill the room. The soft, soothing notes of their favorite song wrapped around them like a warm hug.
+
+Sakshi smiled, her head resting against his shoulder. “You always know how to make everything better.”
+
+Adi pressed a kiss to the top of her head. “Always.”
+
+
+
           </p>
           <button
             onClick={toggleEvening}
@@ -309,7 +333,11 @@ function App() {
         )}
 
         <div className="text-center mt-8 text-gray-600">
-          <p className="animate-pulse">💕 A day in their life 💕</p>
+          <p className="animate-pulse">💕 The familiar melody of Guzarish fills the air. The warm glow of the lights flickers as they sit together, sipping coffee and sharing stories from their day. The soft hum of music plays in the background, setting the perfect mood for their time together.
+
+“Perfect evening,” she whispers, fingers tapping to the rhythm.
+
+Adi chuckles. “Always, with you.” 💕</p>
         </div>
       </div>
     </div>
